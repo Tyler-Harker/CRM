@@ -6,7 +6,7 @@ import {
 } from "@/components/data-table/data-table";
 import { Alert, Button } from "@mui/material";
 import {
-  USER_ORGANIZATION_COLLECTION,
+  getUserOrganziationCollection,
   UserOrganization,
 } from "@tyler-harker/crm-shared";
 import AddIcon from "@mui/icons-material/Add";
@@ -37,7 +37,7 @@ export function OrganizationsListClient() {
     async function fetchUserOrganizations() {
       const userOrgCollection = collection(
         firestore,
-        USER_ORGANIZATION_COLLECTION
+        getUserOrganziationCollection()
       );
 
       const userOrgQuery = query(

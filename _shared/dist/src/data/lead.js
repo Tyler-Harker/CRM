@@ -1,4 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LEAD_COLLECTION = void 0;
-exports.LEAD_COLLECTION = "leads";
+exports.getLeadCollection = getLeadCollection;
+const organization_1 = require("./organization");
+function getLeadCollection(organizationUid) {
+    return `${(0, organization_1.getOrganizationCollection)()}/leads`;
+}

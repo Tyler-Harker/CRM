@@ -6,3 +6,4 @@ export interface Organization {
     lastUpdatedByUid: string;
 }
 export declare const ORGANIZATION_COLLECTION = "organizations";
+export declare function getOrganizationCollection(): string;

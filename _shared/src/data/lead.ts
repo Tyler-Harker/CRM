@@ -1,6 +1,8 @@
 import { LeadSource } from "./leadSource";
+import { getOrganizationCollection } from "./organization";
 
 export interface Lead {
+  uid: string;
   firstName: string;
   lastName: string;
   email?: string;
@@ -8,4 +10,7 @@ export interface Lead {
   createdAt: number;
   source: LeadSource;
 }
-export const LEAD_COLLECTION = "leads";
+
+export function getLeadCollection(organizationUid: string) {
+  return `${getOrganizationCollection()}/leads`;
+}

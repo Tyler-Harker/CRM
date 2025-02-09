@@ -18,6 +18,10 @@ export async function AuthContext({ children }: AuthContextProps) {
   let userClaims: UserClaims | null = null;
   if (token) {
     userClaims = jwtDecode(token);
+    if (Math.floor(Date.now() / 1000) > (userClaims?.exp ?? 0)) {
+      userClaims = null;
+      console.log("here we are");
+    }
   }
   return <AuthContextClient claims={userClaims}>{children}</AuthContextClient>;
 }

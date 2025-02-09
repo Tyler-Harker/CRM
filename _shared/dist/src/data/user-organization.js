@@ -1,4 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.USER_ORGANIZATION_COLLECTION = void 0;
-exports.USER_ORGANIZATION_COLLECTION = "userOrganizations";
+exports.getUserOrganziationCollection = getUserOrganziationCollection;
+function getUserOrganziationCollection() {
+    return "userOrganizations";
+}

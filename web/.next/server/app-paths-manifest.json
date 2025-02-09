@@ -1,1 +1,10 @@
-{}
+{
+  "/dashboard/leads/page": "app/dashboard/leads/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/(authentication)/signin/page": "app/(authentication)/signin/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/(authentication)/signup/page": "app/(authentication)/signup/page.js",
+  "/dashboard/organizations/page": "app/dashboard/organizations/page.js",
+  "/dashboard/organizations/create/page": "app/dashboard/organizations/create/page.js",
+  "/dashboard/organizations/create/api/route": "app/dashboard/organizations/create/api/route.js"
+}

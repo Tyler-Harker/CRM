@@ -18,3 +18,5 @@ __exportStar(require("./organization"), exports);
 __exportStar(require("./user"), exports);
 __exportStar(require("./user-claims"), exports);
 __exportStar(require("./user-organization"), exports);
+__exportStar(require("./lead"), exports);
+__exportStar(require("./leadSource"), exports);

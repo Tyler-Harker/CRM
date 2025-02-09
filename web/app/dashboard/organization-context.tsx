@@ -32,6 +32,7 @@ export async function OrganizationContext({
     userClaims?.selectedOrganizationUid === undefined &&
     whitelistedPaths.indexOf(currentPath) == -1
   ) {
+    console.log(currentPath);
     redirect("/dashboard/organizations");
     return;
   }

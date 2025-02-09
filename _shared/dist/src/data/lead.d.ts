@@ -1,5 +1,6 @@
 import { LeadSource } from "./leadSource";
 export interface Lead {
+    uid: string;
     firstName: string;
     lastName: string;
     email?: string;
@@ -7,4 +8,4 @@ export interface Lead {
     createdAt: number;
     source: LeadSource;
 }
-export declare const LEAD_COLLECTION = "leads";
+export declare function getLeadCollection(organizationUid: string): string;

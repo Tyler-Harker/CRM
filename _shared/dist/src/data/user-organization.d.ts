@@ -11,4 +11,4 @@ export interface UserOrganization {
     lastUpdatedAt: number;
     lastUpdatedby: string;
 }
-export declare const USER_ORGANIZATION_COLLECTION = "userOrganizations";
+export declare function getUserOrganziationCollection(): string;

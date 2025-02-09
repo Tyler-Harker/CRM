@@ -4,7 +4,7 @@ import { FormModel } from "../create-organization-form.model";
 import {
   Organization,
   ORGANIZATION_COLLECTION,
-  USER_ORGANIZATION_COLLECTION,
+  getUserOrganziationCollection,
   UserClaims,
   UserOrganization,
 } from "@tyler-harker/crm-shared";
@@ -22,7 +22,7 @@ export async function POST(request: Request) {
 
   const organizationsCollection = firestore.collection(ORGANIZATION_COLLECTION);
   const userOrganizationCollection = firestore.collection(
-    USER_ORGANIZATION_COLLECTION
+    getUserOrganziationCollection()
   );
 
   return await firestore.runTransaction(async (transaction) => {

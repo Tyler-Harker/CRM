@@ -50,10 +50,11 @@ export function AuthContextClient({
   const [token, setToken] = useCookie<string | null>("token", null);
   const [claims, setClaims] = useState<UserClaims | null>(_claims);
   useEffect(() => {
-    console.log(token);
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user === null) {
+        setToken(null);
         setClaims(null);
+        console.log("here");
         return;
       }
 
